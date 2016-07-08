@@ -1,0 +1,30 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class arraylist1 {
+	public static void main(String args[]){
+		ArrayList<Integer> a = new ArrayList<>();
+		a.add(1);
+		a.add(2);
+		a.add(3);
+		a.add(4);
+		a.add(5);
+		
+ListIterator<Integer>	i = a.listIterator();
+while(i.hasNext()){
+	int x = i.next();
+	if(x%2!=0){
+		i.set(x*x);
+	}
+}
+
+	i=a.listIterator();
+	while(i.hasNext()){
+		System.out.println(i.next());
+	}
+
+}
+}
